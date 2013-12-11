@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+    <defs>
+        <linearGradient id="pulse" x1="0%" x2="0%" y1="-100%" y2="200%">
+             <stop offset="0%" style="stop-color: #cc3d33;" />                                    
+             <stop offset="50%" style="stop-color: white;" />
+             <stop offset="100%" style="stop-color: #cc3d33;" />                                    
+        </linearGradient>
+
+        <linearGradient id="background-one" x1="0%" x2="0%" y1="0%" y2="100%">
+          <stop style="stop-color: #aa1b11;" offset="0"/>
+          <stop style="stop-color: #82130C;" offset="1"/>
+        </linearGradient>
+        <pattern
+            id="background-two"
+            x="0" y="0" width="16" height="20"
+            patternUnits="userSpaceOnUse"
+            viewBox="0 0 16 20">
+            <path 
+                stroke="#cc3d33"
+                stroke-width="0.75"
+                fill="none"
+                d="
+                    M0,0
+                    L8,4
+                    L16,0
+                "
+            />
+            <path 
+                stroke="#cc3d33"
+                stroke-width="0.75"
+                fill="none"
+                d="
+                    M8,4
+                    L8,10
+                "
+            />
+            <path 
+                stroke="#cc3d33"
+                stroke-width="0.75"
+                fill="none"
+                d="
+                    M0,20
+                    L0,14
+                    L8,10
+                    L16,14
+                    L16,20
+                "
+            />
+
+        </pattern>
+        <mask id="grid-mask" maskUnits="userSpaceOnUse"
+          x="0" y="0" width="100%" height="100%">
+        <rect id="grid" fill="url(#background-two)" width="120%" height="120%" x="-10%" y="-10%" />
+        </mask>
+    </defs>
+	<g>
+        <rect fill="url(#background-one)" width="100%" height="100%" />
+        <rect id="grid-materialized" mask="url(#grid-mask)" fill="url(#pulse)" width="100%" height="100%" x="0%" y="0%" />
+	</g>
+</svg>
