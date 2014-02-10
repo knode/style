@@ -1,3 +1,10 @@
+html, body {
+    margin: 0;
+    padding: 0 !important;
+    font-family: 'Lucida Grande', sans-serif;
+    line-height: 1.428571429;
+}
+
 .book-text { fill:none; stroke-width:0.5; stroke:#5E5647; stroke-opacity:0.8; }
 
 .hexagon { stroke:#8CC84B; stroke:#303030; stroke-width:16; }
@@ -13,14 +20,122 @@ h6 { font-size:2.0em; }
 h1, h2, h3 { font-family:"ostrichregular"; }
 h4, h5, h6 { font-family:"ostrichregular"; }
 
-#hero { background:white; margin-bottom: 0px; text-align:center; padding:12px 0px; } 
+h1.logo {
+    display: block;
+    text-indent: -9999px;
+    overflow: hidden;
+    position: relative;
+    background: no-repeat url('../logo.svg');
+    width: 220px;
+    height: 220px;
+    text-align: left;
+    margin: 0;
+}
 
 #hero {
-    background:url('../background-animated.svg') white;
+    background:url('../background.svg') white;
+    margin-bottom: 0px;
+    text-align:center;
+    padding-bottom: 0px;
+} 
+
+#hero h2 { 
+    font-size:1.75em; 
+    color: white;
+}
+
+#index_page #hero hgroup {
+    margin: 0pt auto;
+    width: 640px;
+    text-align: right;
+    padding:27px 0px;
+}
+
+#index_page #hero hgroup:after { 
+    content: ' ';
+    display: block;
+    clear: both;
+}
+
+#index_page #hero hgroup h2 {
+    margin-top: 32px;
+    margin-bottom: 0;
+    line-height: 1.0;
+    font-size: 3.66666em;
+    color: #F0C0C0;
+}
+
+#index_page #hero hgroup h2 span {
+    margin-top: 0;
+    font-size: 1.0;
+    color: white;
+}
+
+#index_page #hero {
+    padding: 12px 0px;
+    padding-bottom: 0px;
+}
+
+#index_page #hero h1 {
+    float: left;
 }
 
 .navigation {
     background: #333; min-height:42px; border-bottom: 8px solid #111;
 }
 
-.centered { margin:0pt auto; width: 940px; }
+.centered {
+    margin: 0pt auto;
+    width: 940px;
+}
+
+nav {
+    background: #303030;
+    margin: 0px; 
+}
+
+nav > a {
+    margin-right: 24px;
+    font-size: 0.85em;
+    color: white;
+    text-transform: uppercase;
+    font-style: italic;
+    text-decoration: none;
+    border-bottom: 2px solid #303030;
+    display: inline-block;
+    padding: 9px 0px;
+    min-width: 48px;
+}
+
+nav > a:last-child {
+    margin-right: 0px;
+}
+
+nav > a:hover {
+    color: white;
+    text-decoration: none;
+    border-bottom-color: white;
+}
+
+.nav-home {
+    font-family:"ostrichregular";
+    font-style: normal;
+    font-size: 1.666em;
+    border-right: 1px solid #a21910;
+    padding-right: 24px;
+    line-height:1.5;
+}
+
+.nav-home:hover {
+    border-bottom-color: #303030;
+}
+
+footer {
+    color: white;
+    background: #303030;
+    height: 60px;
+}
+
+#index_page .nav-home {
+    display: none;
+}
