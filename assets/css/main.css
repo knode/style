@@ -1,3 +1,10 @@
+html, body {
+    margin: 0;
+    padding: 0 !important;
+    font-family: 'Lucida Grande', sans-serif;
+    line-height: 1.428571429;
+}
+
 .book-text { fill:none; stroke-width:0.5; stroke:#5E5647; stroke-opacity:0.8; }
 
 .hexagon { stroke:#8CC84B; stroke:#303030; stroke-width:16; }
@@ -13,14 +20,222 @@ h6 { font-size:2.0em; }
 h1, h2, h3 { font-family:"ostrichregular"; }
 h4, h5, h6 { font-family:"ostrichregular"; }
 
-#hero { background:white; margin-bottom: 0px; text-align:center; padding:12px 0px; } 
+h2, h3, h4, h5, h6 { margin:0.333em 0; }
+
+a {
+    text-decoration: none;
+    color: #cc3d33;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #8f2b24;
+}
+
+h1.logo {
+    display: block;
+    text-indent: -9999px;
+    overflow: hidden;
+    position: relative;
+    background: no-repeat url('../logo.svg');
+    width: 300px;
+    height: 300px;
+    background-size: 100% auto;
+    text-align: left;
+    margin: 0;
+}
 
 #hero {
-    background:url('../background-animated.svg') white;
+    background:url('../background.svg') white;
+    margin-bottom: 0px;
+    text-align:center;
+    padding-bottom: 0px;
+} 
+
+#hero h2 { 
+    font-size:1.75em; 
+    color: white;
+}
+
+#index_page #hero div {
+    margin: 0pt auto;
+    width: 684px;
+    text-align: right;
+    padding:27px 0px;
+}
+
+#index_page #hero div:after { 
+    content: ' ';
+    display: block;
+    clear: both;
+}
+
+#index_page #hero div h2 {
+    margin-top: 27px;
+    margin-bottom: 0;
+    line-height: 1.0;
+    font-size: 3.66666em;
+    color: #F0C0C0;
+}
+
+#index_page #hero div h2 span {
+    margin-top: 0;
+    font-size: 1.0;
+    color: white;
+}
+
+.call-to-action {
+    margin-top: 18px;
+    border: 1px solid white;
+    color: white;
+    border-radius: 3px;
+    padding: 9px 27px;
+    display: inline-block;
+    font-family: 'Lucida Grande', sans-serif;
+}
+
+.call-to-action:hover {
+    border: 1px solid white;
+    color: #a21910;
+    background: white;
+    display: inline-block;
+}
+
+.call-to-action.inverse {
+    border-color: #cc3d33;
+    color: #cc3d33;
+    background: white;
+}
+
+.call-to-action.inverse:hover {
+    color: white;
+    background: #cc3d33;
+}
+
+#index_page #hero {
+    padding: 12px 0px;
+    padding-bottom: 0px;
+}
+
+#index_page #hero h1 {
+    float: left;
 }
 
 .navigation {
     background: #333; min-height:42px; border-bottom: 8px solid #111;
 }
 
-.centered { margin:0pt auto; width: 940px; }
+.centered {
+    margin: 0pt auto;
+    width: 940px;
+}
+
+#index_page nav {
+    border-top: none;
+}
+
+nav {
+    border-top: 9px solid #a21910;
+    background: #303030;
+    margin: 0px; 
+}
+
+nav > a {
+    margin-right: 24px;
+    font-size: 0.85em;
+    color: white;
+    text-transform: uppercase;
+    font-style: italic;
+    text-decoration: none;
+    border-bottom: 2px solid #303030;
+    display: inline-block;
+    padding: 9px 0px;
+    min-width: 48px;
+    vertical-align: bottom;
+}
+
+nav > a:last-child {
+    margin-right: 0px;
+}
+
+nav > a:hover {
+    color: white;
+    text-decoration: none;
+    border-bottom-color: white;
+}
+
+.nav-home {
+    font-family:"ostrichregular";
+    font-style: normal;
+    font-size: 1.666em;
+    border: none;
+    padding-right: 24px;
+    line-height:1.5;
+    position: relative;
+    top: 7px;
+}
+
+.nav-home:hover {
+    border-bottom-color: #303030;
+}
+
+footer {
+    color: white;
+    background: #303030;
+    height: 60px;
+}
+
+#index_page .nav-home {
+    display: none;
+}
+
+#speaker_page .city h3 {
+    padding: 9px;
+    background: #303030;
+    color: white;
+}
+
+#speaker_page .speaker h4 {
+    border-bottom: 1px dashed #c0c0c0;
+}
+
+#speaker_page .social {
+    font-size:0.8em;
+    position:relative;
+    top:-2px;
+}
+
+.avatar {
+    float: right;
+    width: 220px;
+    height: 220px;
+    background: white;
+    padding-left: 27px;
+    padding-bottom: 9px;
+}
+
+.speaker:nth-child(2n + 1) .avatar {
+    float: left;
+    padding-left: 0px;
+    padding-right: 27px;
+}
+
+.speaker + .speaker {
+    margin-top: 27px;
+    padding-top: 26px;
+    border-top: 1px dashed #f8dede;
+}
+
+.speaker .call-to-action {
+    position:relative;
+    top: -6px;
+    padding: 9px 18px;
+}
+
+ul {
+    padding-left: 27px;
+}
+
+ul > li {
+    padding-bottom: 3px;
+}
